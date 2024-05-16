@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karantechline</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        body{
+        
+            background-color: rgb(255, 243, 243);
+
+        }
+
+        .menu-bar {
+            background: black;
+            text-align: center;
+
+        }
+
+        .menu-bar ul {
+            display: inline-flex;
+            list-style: none;
+            color: #fff;
+        }
+
+        .menu-bar ul li {
+            width: 120px;
+            margin: 15px;
+            padding: 5px;
+        }
+
+        .menu-bar ul li a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+ .Active, .menu-bar ul li:hover {
+    background:#23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    transform: translateY(-7px);
+    border-radius: 5px;
+
+ }
+
+ .sun-menu-1 {
+   display: none;
+
+ }
+
+ .menu-bar ul li:hover  .sun-menu-1  {
+
+    display: block;
+    position:absolute;
+    background:rgb(75, 34, 75);
+    margin-top: 15px;
+    margin-left: -15px;
+
+ }
+
+ .menu-bar ul li:hover  .sun-menu-1 ul {
+    display: block;
+    margin: 10px;
+ }
+
+ .menu-bar ul li:hover  .sun-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom:  1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left
+ }
+
+ .menu-bar ul li:hover  .sun-menu-1 ul li::last-child
+{
+    border-bottom:none;
+
+}
+
+.menu-bar ul li:hover  .sun-menu-1 ul li a:hover 
+{
+    color: aqua;
+
+}
+
+
+.home {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 5% 0;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(9.jpg);     
+
+        }
+
+
+        .home-content {
+        
+            max-width: 650px;
+            margin-top: 100px;
+            margin-left: 5px;
+        }
+
+
+        .home-content h3 {
+
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+           
+        }
+
+        
+        .home-content h2 {
+            font-size: 15px;
+            color: rgb(255, 34, 9);
+            padding: 10px;
+        }
+
+        .home-content p {
+            font-size: 20px;
+            margin: 15px 0 30px;
+            color: rgb(201, 196, 192);
+
+        }
+
+
+button {
+          padding: 1.3em 3em;
+          font-size: 15px;
+          text-transform: none;
+          letter-spacing: 2.5px;
+          font-weight: 500;
+          color: #000;
+          background-color: #fff;
+          border: none;
+          border-radius: 45px;
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease 0s;
+          cursor: pointer;
+          outline: none;
+        }
+        
+        button:hover {
+          background-color: #23c483;
+          box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+          color: #fff;
+          transform: translateY(-7px);
+        }
+        
+        button:active {
+          transform: translateY(-1px);
+        }      
+
+
+
+
+
+
+     .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height:350px;
+        background:black;
+        shadow: 0 0 5px #23c483, 0 0 10px #23c483;
+      }
+
+
+      .social-icon a {
+        position: relative;
+        display: inline-block;
+        width: 65px;
+        height: 55px;
+        background:transparent;
+        box-shadow: 0 4px 4px rgba(0,0,0,.3);
+        margin: 0 28px;
+        z-index: 1;
+        text-align: center;
+        line-height: 55px;
+        transition: .3s;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        transform: translateY(8px);
+        margin-top: 50px;
+       
+
+      }
+
+      .social-icon a:hover {
+        background:#23c483;
+        transform: rotate(135deg);
+        box-shadow: 0 0 20px #23c483, 0 0 30px #23c483;
+       
+
+      }
+      
+      .social-icon a::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 70px;
+        background: #929498;
+        z-index:-1;
+
+      }
+
+      .social-icon h1 {
+
+        font-size: 30px;
+      }
+
+      .social-icon a i {
+        font-size: 55px;
+        color: black;
+        transition: .3s;
+      }
+
+      
+      .social-icon a:hover i {
+        transform: rotate(225deg);
+        color:#23c483;
+      }
+
+      .social-icon .head {
+
+        color:#fff;
+        align-items: center;
+        position: absolute;
+        margin-bottom:200px;
+        margin-top: 25px;
+        font-size: 15px;
+        box-shadow: 0 0 15px #23c483, 0 0 10px #23c483;
+        background-color:black;
+
+      }
+
+    
+
+
+
+      .container{
+            min-height: 100vh;
+            width: 100%;
+            background-color:black;
+          
+        }
+
+        .service-wrapper {
+            padding: 5% 8%;
+        }
+
+        .service{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          
+        }
+
+        h1{
+            color: aliceblue;
+            font-size: 5rem;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: transparent;
+            letter-spacing: 4px;
+            background-color: rgb(4, 52,83);
+            background:linear-gradient(8deg,rgb(4, 52,83,1) 0%,rgba(0,230,173,1),rgba(41,17,45,1) 100% );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+        }
+
+        h1:after{
+            content:'';
+            position: absolute;
+            top: 100%;
+            left: 10%;
+            height: 8px;
+            width: 80%;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        h1 span{
+            position: absolute;
+            top: 100%;
+            left: 10%;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: #72e2ae;
+            animation: anim 5s linear infinite;
+
+        }
+
+        @keyframes anim{
+            95% {
+                opacity: 0;
+            }
+            100% {
+                opacity:0;
+                left: 88%;
+            }
+        }
+
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            margin-top: 80px;
+           
+        }
+        .card {
+            height: 350;
+            width: 370px;
+            background-color: #1c2335;
+            padding: 3% 8%;
+            border: 0.2px solid rgb(144, 226,174,0.2);
+            border-radius: 8px;
+            transition: 06s;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            transform: translateY(8px);
+            transition: 0.1s;
+            
+        }
+
+        .card:after {
+            content: '';
+            position: absolute;
+            top: 150%;
+            left: 200px;
+            width: 120%;
+            transform: rotate(50deg);
+            background-color: aliceblue;
+            height: 18px;
+            filter: blur(30px);
+            opacity: 0.5;
+            transition:1s;
+
+        }
+
+        .card:hover:after{
+            width: 225%;
+            top: 100%;
+        }
+
+        .card i {
+            color: aqua;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 4.8rem;
+        }
+
+        .card h2 {
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        .card p{
+            text-align: left;
+            width: 100%;
+            margin: 12px 0;
+            color: rgba(225,225,225,0.6);
+        }
+
+        .card:hover{
+            background-color: transparent;
+            transform: translate(-8px);
+            transition: 1s;
+        }
+
+
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="menu-bar">   
+     <ul>
+        <li class="Active"><a href="#">Home</a></li>
+        <li>
+            <a href="service.html">Services</a>
+            
+        </li>
+
+       
+        <li>
+            <a href="#">About</a>
+        </li>
+
+        <li>
+            <a href="https://karantech.my.canva.site/">Contact</a>
+            
+        </li>
+
+
+        
+       
+       
+        
+    </ul>
+</div>
+
+<section class="home">
+    <div class="home-content">
+      
+        
+        <h3> Hello My Name is Karan</h3>
+        <p> I Make a web wave tech website  <br> In this website
+           i make all the website making codes<br> using html and css in one place.
+        </p>
+       
+            <button>
+                WebWaveTech
+            </button> 
+            </div>      
+</section>
+
+
+
+
+
+<div class="container">
+    <div class="service">
+        <h1>Our Service <span></span></h1>
+        <div class="cards">
+
+            <div class="card">
+                <i class="fa-solid fa-globe"></i>
+                <h2> website design </h2>
+                <p>Click Here, <br> To start design your website by selecting the templates
+                    and order the website look like  online shopping this page go to webdesign page 
+                </p> 
+            </div>
+
+            
+            <div class="card">
+                <i class="fa-solid fa-code"></i>
+                <h2>HTML & CSS Code's</h2>
+                <p> this page provide the website code using html and css 
+                    and make easily and design easily your website. they make easy 
+
+                </p> 
+            </div>
+
+            
+            <div class="card">
+                <i class="fa-solid fa-file-excel"></i>
+                <h2>Data Entry</h2>
+                <p> Excel data celaning and formatting , the project are here and price also here 
+                    this page open in other excel price view page.
+                </p> 
+            </div>
+
+            <div class="card">
+                <i class="fa-brands fa-html5"></i>
+                <h2> HTML course's</h2>
+                <p> Html course list and full course, the page open in youtube and etc.<br>
+                    this course make your concepts clear and learn easily. 
+                </p> 
+            </div>
+
+            
+            <div class="card">
+                <i class="fa-brands fa-linux"></i>
+                <h2>Linux</h2>
+                <p>All linux command, linux Basic to Advance course and projects are here,
+                    linux like, kali , ubantu etc  All couse video are here.
+
+                </p> 
+            </div>
+
+            
+            <div class="card">
+                <i class="fa-solid fa-file-code"></i>
+                <h2>Other courses</h2>
+                <p> Here other course are like python, C , C++, etc.
+                    this course open in youtube.
+                </p> 
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+<header class="social">
+    
+    <div class="social-icon">
+        <div class="head">
+            <h1>Social Media</h1>
+        </div>
+
+        <a href="https://www.instagram.com/__karan375__/"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="https://github.com/karantechline"><i class="fa-brands fa-square-github"></i></a>
+        <a href="https://www.linkedin.com/in/karan-techline-bb72372bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+        <i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://karantechline@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+</header>
+
+
+
+
+
+
+</body>
+</html>
