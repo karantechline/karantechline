@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service page </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+        
+
+
+        .menu-bar {
+            background: black;
+            text-align: center;
+
+        }
+
+        .menu-bar ul {
+            display: inline-flex;
+            list-style: none;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .menu-bar ul li {
+            font-size: 20px;
+            width: 120px;
+            margin: 25px;
+            padding: 15px;
+        }
+
+        .menu-bar ul li a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+ .Active, .menu-bar ul li:hover {
+    background:#23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    transform: translateY(-7px);
+    border-radius: 5px;
+
+ }
+
+ .sun-menu-1 {
+   display: none;
+
+ }
+
+ .menu-bar ul li:hover  .sun-menu-1  {
+
+    display: block;
+    position:absolute;
+    background:rgb(75, 34, 75);
+    margin-top: 15px;
+    margin-left: -15px;
+
+ }
+
+ .menu-bar ul li:hover  .sun-menu-1 ul {
+    display: block;
+    margin: 10px;
+ }
+
+ .menu-bar ul li:hover  .sun-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom:  1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left
+ }
+
+ .menu-bar ul li:hover  .sun-menu-1 ul li::last-child
+{
+    border-bottom:none;
+
+}
+
+.menu-bar ul li:hover  .sun-menu-1 ul li a:hover 
+{
+    color: aqua;
+
+}
+
+
+
+        .container{
+            min-height: 100vh;
+            width: 100%;
+            background-color:black;
+            
+        }
+
+        .service-wrapper {
+            padding: 5% 8%;
+        }
+
+        .service{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+       
+
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 30px;
+            margin-top: 80px;
+        }
+        .card {
+            height: 350;
+            width: 370px;
+            background-color: #1c2335;
+            padding: 3% 8%;
+            border: 0.2px solid rgb(144, 226,174,0.2);
+            border-radius: 8px;
+            transition: 06s;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+            transform: translateY(8px);
+            transition: 0.1s;
+        }
+
+        .card:after {
+            content: '';
+            position: absolute;
+            top: 150%;
+            left: 200px;
+            width: 120%;
+            transform: rotate(50deg);
+            background-color: aliceblue;
+            height: 18px;
+            filter: blur(30px);
+            opacity: 0.5;
+            transition:1s;
+
+        }
+
+        .card:hover:after{
+            width: 225%;
+            top: 100%;
+        }
+
+        .card i {
+            color: aqua;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 4.8rem;
+        }
+
+        .card h2 {
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        .card p{
+            text-align: left;
+            width: 100%;
+            margin: 12px 0;
+            color: rgba(225,225,225,0.6);
+        }
+
+        .card:hover{
+            background-color: transparent;
+            transform: translate(-8px);
+            transition: 1s;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    
+<div class="menu-bar">   
+    <ul>
+       <li><a href="index.html">Home</a></li>
+       <li  class="Active">
+           <a href="service.html">Services</a>
+           
+       </li>
+
+      
+       <li>
+           <a href="#">About</a>
+       </li>
+
+       <li>
+           <a href="https://karantech.my.canva.site/">Contact</a>
+           
+       </li>
+
+
+       
+      
+      
+       
+   </ul>
+</div>
+
+
+    <div class="container">
+        <div class="service">
+           
+            <div class="cards">
+
+                <div class="card">
+                    <i class="fa-solid fa-globe"></i>
+                    <h2> website design </h2>
+                    <p> learn more about this and learhn , in detial of in it 
+                        my name is karan singh i am in 12th std in svd school 
+                        learn more about this and learhn , in detial of in it 
+                        my name is karan singh i am in 12th std in svd school 
+                    </p> 
+                </div>
+
+                
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>HTML & CSS Code's</h2>
+                    <p> learn more about this and learhn , in detial of in it 
+                        my name is karan singh i am in 12th std in svd school 
+                    </p> 
+                </div>
+
+                
+                <div class="card">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <h2>Data Entry</h2>
+                    <p> learn more about this and learhn , in detial of in it 
+                        my name is karan singh i am in 12th std in svd school 
+                    </p> 
+                </div>
+
+                <div class="card">
+                    <i class="fa-brands fa-html5"></i>
+                    <h2> HTML course's</h2>
+                    <p> learn more about this and learhn , in detial of in it 
+                        my name is karan singh i am in 12th std in svd school 
+                    </p> 
+                </div>
+
+                
+                <div class="card">
+                    <i class="fa-brands fa-linux"></i>
+                    <h2>Linux</h2>
+                    <p> learn more about this and learhn , in detial of in it 
+                        my name is karan singh i am in 12th std in svd school 
+                    </p> 
+                </div>
+
+                
+                <div class="card">
+                    <i class="fa-solid fa-file-code"></i>
+                    <h2>Other courses</h2>
+                    <p> learn more about this and learhn , in detial of in it 
+                        my name is karan singh i am in 12th std in svd school 
+                    </p> 
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
